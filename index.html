@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вне канала — почему закрытые чаты затягивают</title>
+  <meta name="description" content="Сатирический манифест о том, как «только для своих» превращается в эхо-камеру, сплетни и тревогу. Три вымышленных героя, шесть причин и один выход.">
+  <meta name="theme-color" content="#0a0b08">
+  <meta property="og:title" content="Вне канала — почему закрытые чаты затягивают">
+  <meta property="og:description" content="Закрытый канал не делает тебя избранным. Он делает тебя изолированным.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d8ff57'/%3E%3Cpath d='M16 22a6 6 0 0 1 6-6h20a6 6 0 0 1 6 6v12a6 6 0 0 1-6 6H30l-10 9v-9h-1a6 6 0 0 1-6-6V22Z' fill='none' stroke='%230a0b08' stroke-width='4'/%3E%3Cpath d='m24 22 16 16M40 22 24 38' stroke='%230a0b08' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__grid"></div>
+    <div class="bg__glow bg__glow--lime"></div>
+    <div class="bg__glow bg__glow--pink"></div>
+    <div class="bg__grain"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="shell topbar__inner">
+      <a class="brand" href="#top" aria-label="Вне канала — на главную">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H9l-4 4v-4.2A2.5 2.5 0 0 1 4 13.5v-7Z" stroke="currentColor" stroke-width="1.7"/>
+            <path d="m8.5 8.5 7 7M15.5 8.5l-7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">вне <b>канала</b></span>
+      </a>
+
+      <nav class="nav" id="siteNav" aria-label="Основная навигация">
+        <a href="#characters">Персонажи</a>
+        <a href="#reasons">Почему</a>
+        <a href="#quiz">Тест</a>
+        <a href="#exit">Выход</a>
+        <a class="btn btn--lime btn--sm" href="#quiz">Проверить себя</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero__copy">
+        <div class="badge"><span class="badge__dot"></span> сатирический манифест · персонажи вымышлены</div>
+        <h1>Закрытый канал не делает тебя избранным. Он делает тебя <span class="mark">изолированным</span>.</h1>
+        <p class="hero__lead">Костя, Егор и Артём были уверены, что сидят в элитном кругу. На самом деле они сидели в комнате с зашторенными окнами. Разбираем, почему «только для своих» — это не безопасность, а ловушка.</p>
+        <div class="hero__actions">
+          <a class="btn btn--lime" href="#reasons">Разобрать по пунктам <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--ghost" href="#quiz">Проверить себя</a>
+        </div>
+        <div class="hero__meta">
+          <span><b>3</b> вымышленных героя</span>
+          <span><b>6</b> причин</span>
+          <span><b>1</b> выход</span>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="phone" role="img" aria-label="Сатирическая реконструкция закрытого канала">
+          <div class="phone__top">
+            <span class="phone__lock" aria-hidden="true">🔒</span>
+            <div>
+              <div class="phone__title">закрытый канал</div>
+              <div class="phone__sub">12 участников · только для своих</div>
+            </div>
+            <span class="phone__badge">LIVE</span>
+          </div>
+          <div class="phone__messages">
+            <div class="msg msg--left">
+              <div class="msg__author">Костя <span>24</span></div>
+              <div class="msg__bubble">Слышал про одного человека. Скину скрин, только это между нами.</div>
+              <div class="msg__time">23:41</div>
+            </div>
+            <div class="msg msg--left msg--muted">
+              <div class="msg__author">Егор <span>27</span></div>
+              <div class="msg__bubble">Опять? Мы вообще про работу или про чью-то личную жизнь?</div>
+              <div class="msg__time">23:42</div>
+            </div>
+            <div class="msg msg--right">
+              <div class="msg__author">Костя <span>24</span></div>
+              <div class="msg__bubble">Ты не понимаешь. В общем чате такое не напишешь.</div>
+              <div class="msg__time">23:43</div>
+            </div>
+            <div class="typing">
+              <span class="typing__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+              Артём печатает уже 12 минут
+            </div>
+          </div>
+          <div class="phone__footer">
+            <span>147 непрочитанных</span>
+            <span>выйти →</span>
+          </div>
+        </div>
+        <div class="hero__sticker hero__sticker--1">«элитный круг»</div>
+        <div class="hero__sticker hero__sticker--2">на самом деле — эхо-камера</div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span>закрытый канал</span><span>✦</span><span>эхо-камера</span><span>✦</span><span>сплетни</span><span>✦</span><span>тревога</span><span>✦</span><span>fomo</span><span>✦</span><span>потеря границ</span><span>✦</span>
+        </div>
+        <div class="ticker__group">
+          <span>закрытый канал</span><span>✦</span><span>эхо-камера</span><span>✦</span><span>сплетни</span><span>✦</span><span>тревога</span><span>✦</span><span>fomo</span><span>✦</span><span>потеря границ</span><span>✦</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section shell" id="characters">
+      <div class="section__head" data-reveal>
+        <span class="kicker">01 / герои</span>
+        <h2>Три человека, которые точно «в курсе»</h2>
+        <p>Собирательные образы. Любые совпадения случайны — но узнавание гарантировано.</p>
+      </div>
+
+      <div class="characters">
+        <article class="character" data-reveal>
+          <div class="character__top">
+            <div class="character__avatar character__avatar--k" aria-hidden="true">К</div>
+            <div>
+              <h3>Костя, 24</h3>
+              <span class="character__role">хранитель инсайдов</span>
+            </div>
+          </div>
+          <blockquote>«Я не сплетничаю. Я делюсь эксклюзивом».</blockquote>
+          <p>Пересылает чужие сообщения с подписью «только между нами». Считает, что доступ к чужой тайне делает его своим. Не замечает, что завтра его скрин тоже станет чьим-то эксклюзивом.</p>
+          <div class="character__tag">симптом: «я просто в курсе»</div>
+        </article>
+
+        <article class="character" data-reveal>
+          <div class="character__top">
+            <div class="character__avatar character__avatar--e" aria-hidden="true">Е</div>
+            <div>
+              <h3>Егор, 27</h3>
+              <span class="character__role">тревожный наблюдатель</span>
+            </div>
+          </div>
+          <blockquote>«Я на минуту. Просто проверю, что там ничего важного».</blockquote>
+          <p>Заходит на минуту и остаётся до трёх ночи. У него 147 непрочитанных, ноль действий и стойкое ощущение, что он что-то упускает. Канал давно стал его способом ничего не делать.</p>
+          <div class="character__tag">симптом: «а вдруг я пропущу»</div>
+        </article>
+
+        <article class="character" data-reveal>
+          <div class="character__top">
+            <div class="character__avatar character__avatar--a" aria-hidden="true">А</div>
+            <div>
+              <h3>Артём, 22</h3>
+              <span class="character__role">молчаливый свидетель</span>
+            </div>
+          </div>
+          <blockquote>«Лучше промолчу. А то ещё вынесут».</blockquote>
+          <p>Читает всё, не пишет ничего. Соглашается в голове, но не в чате. Постепенно перестаёт доверять даже тем, кто ему ничего плохого не сделал: если здесь обсуждают всех, почему не его?</p>
+          <div class="character__tag">симптом: «я тут просто так»</div>
+        </article>
+      </div>
+
+      <p class="disclaimer">* Все персонажи, диалоги и ситуации вымышлены. Совпадения с реальными людьми случайны.</p>
+    </section>
+
+    <section class="section shell" id="reasons">
+      <div class="section__head" data-reveal>
+        <span class="kicker">02 / почему плохо</span>
+        <h2>Шесть причин, почему «только для своих» — не безопасно</h2>
+        <p>Закрытость сама по себе не зло. Проблема начинается, когда она подменяет доверие, факты и границы.</p>
+      </div>
+
+      <div class="reasons">
+        <article class="reason" data-reveal>
+          <span class="reason__num" aria-hidden="true">01</span>
+          <h3>Эхо-камера</h3>
+          <p>В закрытом кругу быстро появляется «наше мнение». Несогласных не переубеждают — их просто выводят из чата. В итоге ты слышишь только то, что и так думал.</p>
+          <span class="reason__signal">сигнал: «все нормальные люди так считают»</span>
+        </article>
+
+        <article class="reason" data-reveal>
+          <span class="reason__num" aria-hidden="true">02</span>
+          <h3>Анонимность без ответственности</h3>
+          <p>В канале легко написать то, чего не скажешь в лицо. Нет паузы, нет взгляда, нет реакции — только экран. Слова перестают ощущаться поступками.</p>
+          <span class="reason__signal">сигнал: «я же ничего такого не сделал»</span>
+        </article>
+
+        <article class="reason" data-reveal>
+          <span class="reason__num" aria-hidden="true">03</span>
+          <h3>Сплетни как валюта</h3>
+          <p>Чужая личная история — пропуск в круг. Её пересылают «только своим», а завтра она возвращается к тебе в чужом пересказе. Доверие становится разменной монетой.</p>
+          <span class="reason__signal">сигнал: «смотри, что мне написали»</span>
+        </article>
+
+        <article class="reason" data-reveal>
+          <span class="reason__num" aria-hidden="true">04</span>
+          <h3>Искажение картины мира</h3>
+          <p>Десять человек — не «все». Скриншот — не доказательство. Канал выдаёт громкое меньшинство за реальность и подменяет контекст удобной версией.</p>
+          <span class="reason__signal">сигнал: «это уже все обсуждают»</span>
+        </article>
+
+        <article class="reason" data-reveal>
+          <span class="reason__num" aria-hidden="true">05</span>
+          <h3>Тревога и время</h3>
+          <p>Постоянная проверка канала создаёт дофаминовую петлю: ты вроде бы «в курсе», но на деле истощён. Время уходит, ясности не прибавляется.</p>
+          <span class="reason__signal">сигнал: «ещё пять минут»</span>
+        </article>
+
+        <article class="reason" data-reveal>
+          <span class="reason__num" aria-hidden="true">06</span>
+          <h3>Размывание границ</h3>
+          <p>Личное становится контентом, дружба — доступом, а «свои» — аудиторией. Чем больше ты знаешь о других, тем меньше остаётся твоего.</p>
+          <span class="reason__signal">сигнал: «а что, так можно было?»</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="loop">
+      <div class="section__head" data-reveal>
+        <span class="kicker">03 / как затягивает</span>
+        <h2>Один вечер — и ты уже внутри</h2>
+        <p>Закрытый канал не требует решения. Он просто оказывается рядом.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__step" data-reveal>
+          <span class="timeline__time">23:40</span>
+          <h3>«просто посмотрю»</h3>
+          <p>Костя скидывает ссылку. Ты заходишь на минуту — понять, о чём там вообще.</p>
+        </article>
+        <article class="timeline__step" data-reveal>
+          <span class="timeline__time">00:15</span>
+          <h3>«я только читаю»</h3>
+          <p>Пролистал двести сообщений. Ничего важного. Почему-то всё равно не выходишь.</p>
+        </article>
+        <article class="timeline__step" data-reveal>
+          <span class="timeline__time">01:30</span>
+          <h3>«а что я пропущу?»</h3>
+          <p>Канал затихает. Ты проверяешь его ещё три раза: вдруг там появится что-то, что объяснит всё.</p>
+        </article>
+        <article class="timeline__step" data-reveal>
+          <span class="timeline__time">03:00</span>
+          <h3>«зачем я здесь?»</h3>
+          <p>Ты не помнишь ни одной полезной вещи. Зато помнишь чужую тайну, которую не должен был знать.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="quiz">
+      <div class="quiz" data-reveal>
+        <div class="quiz__intro">
+          <span class="kicker">04 / самопроверка</span>
+          <h2>Ты читаешь канал — или канал читает тебя?</h2>
+          <p>Шесть вопросов без диагностики и осуждения. Отвечай честно — результат видишь только ты.</p>
+          <div class="quiz__note">Это не медицинский тест. Если тревога мешает жить, поговори с близким человеком или специалистом.</div>
+        </div>
+
+        <div>
+          <form class="quiz__form" id="quizForm" aria-label="Тест: не застрял ли ты в закрытом канале">
+            <button class="btn btn--lime quiz__submit" type="submit">Показать результат</button>
+          </form>
+
+          <div class="quiz__result" id="quizResult" aria-live="polite" hidden>
+            <div class="quiz__score"><b id="quizScore">0 / 6</b><span>ответов «да»</span></div>
+            <div class="quiz__meter"><span id="quizBar"></span></div>
+            <div class="quiz__verdict">
+              <h3 id="quizVerdictTitle"></h3>
+              <p id="quizVerdictText"></p>
+            </div>
+            <button class="btn btn--ghost quiz__retry" type="button" id="quizRetry">Пройти заново</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="exit">
+      <div class="section__head" data-reveal>
+        <span class="kicker">05 / выход</span>
+        <h2>Что делать, если ты уже застрял</h2>
+        <p>Не нужно устраивать цифровой детокс на год. Достаточно вернуть себе выбор.</p>
+      </div>
+
+      <div class="exit-grid">
+        <article class="step" data-reveal>
+          <span class="step__num">01</span>
+          <h3>Выключи автопилот</h3>
+          <p>Отключи уведомления канала на 48 часов. Не удаляй, не выходи — просто убери звук. Первые сутки будет странно. Это нормально.</p>
+        </article>
+        <article class="step" data-reveal>
+          <span class="step__num">02</span>
+          <h3>Проверь, что ты получаешь</h3>
+          <p>За неделю выпиши, что канал дал тебе кроме тревоги: факты, поддержку, полезные связи? Если список пустой — это ответ.</p>
+        </article>
+        <article class="step" data-reveal>
+          <span class="step__num">03</span>
+          <h3>Скажи лично</h3>
+          <p>Если есть конфликт или вопрос к человеку, обсуди его с человеком, а не с каналом. Даже неловкий разговор честнее идеального скриншота.</p>
+        </article>
+        <article class="step" data-reveal>
+          <span class="step__num">04</span>
+          <h3>Оставь только живые места</h3>
+          <p>Хороший чат — тот, где есть правила, модерация и возможность ответить. Если этого нет, это не «клуб своих», а комната без окон.</p>
+        </article>
+      </div>
+
+      <div class="checklist" id="checklist" data-reveal>
+        <div class="checklist__head">
+          <div>
+            <h3>Чек-лист «неделя вне шёпота»</h3>
+            <p>Отмечай пункты — прогресс сохранится в браузере.</p>
+          </div>
+          <button class="btn btn--ghost btn--sm" type="button" id="copyChecklist">Скопировать</button>
+        </div>
+        <div class="checklist__progress" aria-hidden="true"><span id="checklistBar"></span></div>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" data-check="1">
+              <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="txt">Отключить уведомления закрытого канала на 48 часов</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" data-check="2">
+              <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="txt">Не пересылать чужие сообщения и скриншоты без разрешения</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" data-check="3">
+              <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="txt">Задать себе вопрос: «что я узнал(а) здесь полезного за неделю?»</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" data-check="4">
+              <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="txt">Написать одному человеку лично вместо обсуждения его в чате</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" data-check="5">
+              <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="txt">Оставить один канал с правилами и модерацией, остальные — на паузу</span>
+            </label>
+          </li>
+        </ul>
+        <div class="checklist__footer">
+          <span id="checklistCount">0 из 5</span>
+          <button type="button" id="resetChecklist">Сбросить</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="finale shell">
+      <div class="finale__card" data-reveal>
+        <span class="kicker">06 / снаружи</span>
+        <h2>Снаружи шумно, но там есть люди.</h2>
+        <p>Закрытый канал обещает близость, а даёт тревогу. Настоящая близость начинается там, где можно сказать то же самое — глядя человеку в глаза.</p>
+        <div class="finale__actions">
+          <a class="btn btn--lime" href="#quiz">Пройти тест ещё раз</a>
+          <button class="btn btn--ghost" type="button" id="shareBtn">Поделиться манифестом</button>
+        </div>
+        <div class="finale__signature">вне канала · 2026</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__brand"><span class="dot" aria-hidden="true"></span> вне канала · 2026</div>
+      <p>Сатирический манифест. Персонажи и истории вымышлены, совпадения случайны. Сайт не призывает к травле — наоборот. Если тревога мешает жить, поговори с близким человеком или специалистом.</p>
+      <a href="#top">наверх ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
